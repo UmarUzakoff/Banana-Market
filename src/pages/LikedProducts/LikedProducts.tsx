@@ -30,7 +30,7 @@ const LikedProducts = () => {
               </CardHeader>
               <CardContent>
                 <img
-                  src={`http://localhost:3333/uploads/${product.image}`}
+                  src={`https://productscategoriesexpress-production.up.railway.app/uploads/${product.image}`}
                   alt={product.name}
                   className="w-full h-48 object-cover rounded-lg"
                 />

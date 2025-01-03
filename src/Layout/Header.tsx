@@ -20,13 +20,13 @@ interface Product {
 }
 
 const fetchCategories = async (): Promise<Category[]> => {
-  const { data } = await axios.get("http://localhost:3333/categories/");
+  const { data } = await axios.get("https://productscategoriesexpress-production.up.railway.app/categories/");
   return data.categories;
 };
 
 const fetchProducts = async (searchTerm: string): Promise<Product[]> => {
   const { data } = await axios.get(
-    `http://localhost:3333/products?name=${searchTerm}`
+    `https://productscategoriesexpress-production.up.railway.app/products?name=${searchTerm}`
   );
   return data.products;
 };

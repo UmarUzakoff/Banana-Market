@@ -23,7 +23,7 @@ const UsersDashboard: React.FC = () => {
         return;
       }
 
-      const response = await axios.get("http://localhost:3333/admin/users", {
+      const response = await axios.get("https://productscategoriesexpress-production.up.railway.app/admin/users", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

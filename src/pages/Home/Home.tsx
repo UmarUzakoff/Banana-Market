@@ -15,7 +15,7 @@ import { toast } from "react-toastify";
 
 const fetchProducts = async (page: number, limit: number) => {
   const { data } = await axios.get(
-    `http://localhost:3333/products?page=${page}&limit=${limit}`
+    `https://productscategoriesexpress-production.up.railway.app/products?page=${page}&limit=${limit}`
   );
   return data;
 };
@@ -78,7 +78,7 @@ const Home = () => {
               </CardHeader>
               <CardContent>
                 <img
-                  src={`http://localhost:3333/uploads/${product.image}`}
+                  src={`https://productscategoriesexpress-production.up.railway.app/uploads/${product.image}`}
                   alt={product.name}
                   className="w-full h-48 object-cover rounded-lg"
                 />

@@ -37,7 +37,7 @@ const CategoriesDashboard: React.FC = () => {
         return;
       }
 
-      const response = await axios.get("http://localhost:3333/categories", {
+      const response = await axios.get("https://productscategoriesexpress-production.up.railway.app/categories", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -65,7 +65,7 @@ const CategoriesDashboard: React.FC = () => {
 
       if (isEditing && editId) {
         await axios.put(
-          `http://localhost:3333/categories/${editId}`,
+          `https://productscategoriesexpress-production.up.railway.app/categories/${editId}`,
           formData,
           {
             headers: {
@@ -75,7 +75,7 @@ const CategoriesDashboard: React.FC = () => {
         );
         toast.success("Category updated successfully!");
       } else {
-        await axios.post("http://localhost:3333/categories", formData, {
+        await axios.post("https://productscategoriesexpress-production.up.railway.app/categories", formData, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -99,7 +99,7 @@ const CategoriesDashboard: React.FC = () => {
         return;
       }
 
-      await axios.delete(`http://localhost:3333/categories/${id}`, {
+      await axios.delete(`https://productscategoriesexpress-production.up.railway.app/categories/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -154,7 +154,7 @@ const CategoriesDashboard: React.FC = () => {
               <td className="p-4">{category.description}</td>
               <td className="p-4">
                 <img
-                  src={`http://localhost:3333/uploads/${category.image}`}
+                  src={`https://productscategoriesexpress-production.up.railway.app/uploads/${category.image}`}
                   alt={category.name}
                   className="w-16 h-16 object-cover"
                 />

@@ -49,7 +49,7 @@ const ProductsDashboard: React.FC = () => {
         return;
       }
 
-      const response = await axios.get("http://localhost:3333/products", {
+      const response = await axios.get("https://productscategoriesexpress-production.up.railway.app/products", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -63,7 +63,7 @@ const ProductsDashboard: React.FC = () => {
   const fetchCategories = async () => {
     try {
       const token = useAuthStore.getState().token;
-      const response = await axios.get("http://localhost:3333/categories", {
+      const response = await axios.get("https://productscategoriesexpress-production.up.railway.app/categories", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -95,14 +95,14 @@ const ProductsDashboard: React.FC = () => {
       console.log(editId);
 
       if (isEditing && editId) {
-        await axios.put(`http://localhost:3333/products/${editId}`, formData, {
+        await axios.put(`https://productscategoriesexpress-production.up.railway.app/products/${editId}`, formData, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
         toast.success("Product updated successfully!");
       } else {
-        await axios.post("http://localhost:3333/products", formData, {
+        await axios.post("https://productscategoriesexpress-production.up.railway.app/products", formData, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -126,7 +126,7 @@ const ProductsDashboard: React.FC = () => {
         return;
       }
 
-      await axios.delete(`http://localhost:3333/products/${id}`, {
+      await axios.delete(`https://productscategoriesexpress-production.up.railway.app/products/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

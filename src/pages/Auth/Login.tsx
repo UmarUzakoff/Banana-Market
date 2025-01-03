@@ -20,7 +20,7 @@ const Login = () => {
 
   const onSubmit = async (data: any) => {
     try {
-      const response = await axios.post("http://localhost:3333/login", data);
+      const response = await axios.post("https://productscategoriesexpress-production.up.railway.app/login", data);
       const { token } = response.data;
 
       setToken(token);

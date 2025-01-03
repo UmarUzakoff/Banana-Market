@@ -20,7 +20,7 @@ const Register = () => {
 
   const onSubmit = async (data: any) => {
     try {
-      const response = await axios.post("http://localhost:3333/register", data);
+      const response = await axios.post("https://productscategoriesexpress-production.up.railway.app/register", data);
       setToken(response.data.token);
       setAuthenticated(true);
       navigate("/");
